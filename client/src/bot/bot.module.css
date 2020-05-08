@@ -1,0 +1,52 @@
+.botCont {
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+                        "comp"
+                        "wwu"
+                        "con"
+                        "disc"
+    ;
+    background-color: #f9f8f4;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    line-height: 18px;
+    color: #767676;
+
+}
+
+.botCont h3 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 12px 0;
+    text-transform: uppercase;
+    color: #767676;
+    margin-bottom: 8px
+}
+
+.botCont div {
+    padding-right: 15px;
+}
+
+.botCont p {
+    line-height: 1.5;
+    margin: 0;
+}
+.comp {
+    grid-area: "comp";
+}
+
+.wwu {
+    grid-area: "wwu";
+}
+
+.con {
+    grid-area: "con";
+}
+
+.disc {
+    grid-area: "disc";
+}
+
