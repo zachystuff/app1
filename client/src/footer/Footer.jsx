@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './bot.module.css'
+import style from './Footer.module.css';
 
 const bot = () => {
     return (
