@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "react-dev": "webpack --watch --mode development",
-    "react-server": "webpack-dev-server"
+    "react-server": "webpack-dev-server",
+    "server": "nodemon server/index.js"
   },
   "keywords": [
     "mongo",
@@ -17,6 +18,8 @@
   "author": "Zach Yusuf",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

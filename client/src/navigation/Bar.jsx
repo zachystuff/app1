@@ -1,10 +1,16 @@
 import React, { useEffect } from 'react';
 
 import { useStateValue } from '../store/state';
+import useSearchForm from './CustomHooks';
 
-const top = () => {
+const Bar = () => {
     const [search, setSearch] = useStateValue({});
     const [hasError, setErrors] = useStateValue(false);
+    
+    // Event handler, custom hook
+    const {inputs, handleInputChange, handleSubmit} = useSearchForm(() => {
+        console.log(inputs);
+    });
 
     // useEffect(() => {
     //     async function fetchData() {
@@ -17,14 +23,20 @@ const top = () => {
         
     //     fetchData();
     // });
+    
     return (
         <div>
             <h1>
                 Book finder app by zachy! Search all your favorite books here!
             </h1>
-            <form >
+            <form onSubmit={handleSubmit}>
                 <label>
-          <input type="text" placeholder="search"/>
+          <input 
+            type="text" 
+            placeholder="search" 
+            value={inputs.search}
+            onChange={handleInputChange}
+           />
                 </label>
                 <input type="submit" value="search" />
             </form>
@@ -32,4 +44,4 @@ const top = () => {
     )
 };
 
-export default top;
+export default Bar;
